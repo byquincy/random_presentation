@@ -1,0 +1,86 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+:root {
+    --roulette-gray: #636363;
+    --roulette-blue: #673af9;
+    --roulette-white: #f7f6fa;
+}
+
+body {
+    background-color: var(--roulette-white);
+    margin: 0;
+}
+
+input {
+    font-size: 1.3rem;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    overflow: visible;
+
+    padding: 0.4rem;
+    padding-left: 0;
+
+    transition-property: border-width, border-color, margin-bottom;
+    transition-duration: 200ms;
+    margin-bottom: 1px;
+    border-bottom: solid 1px var(--roulette-gray);
+}
+input:focus {
+    border-width: 0 0 2px 0;
+    border-color: var(--roulette-blue);
+    margin-bottom: 0;
+    }
+/* input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+h2 {
+    font-weight: normal;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    text-decoration: none !important;
+
+    border: none;
+    border-radius: 2rem;
+
+    width: auto;
+
+    background-color: var(--roulette-blue);
+    color: var(--roulette-white);
+
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+
+    height: 100%;
+
+    margin: 20px;
+}
+
+.emphasize {
+    font-size: 2rem;
+}
