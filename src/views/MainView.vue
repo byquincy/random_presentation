@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 
 const questions = ref([])
 let id = 0
@@ -76,7 +76,17 @@ function makeQuestions() {
   }
 }
 
-makeQuestions()
+function initialize() {
+  groupNum.value = JSON.parse(localStorage.getItem("groupNum"))??5
+  peopleInGroup.value = JSON.parse(localStorage.getItem("peopleInGroup"))??4
+
+  watchEffect(() => { localStorage.setItem("groupNum", groupNum.value) })
+  watchEffect(() => { localStorage.setItem("peopleInGroup", peopleInGroup.value) })
+
+  makeQuestions()
+}
+
+initialize()
 </script>
 
 <style>

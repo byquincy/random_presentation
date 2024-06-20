@@ -11,6 +11,8 @@
 body {
     background-color: var(--roulette-white);
     margin: 0;
+
+    margin-bottom: 27px;
 }
 
 input {
@@ -83,4 +85,29 @@ button {
 
 .emphasize {
     font-size: 2rem;
+}
+
+#logo-container {
+    width: 100vw;
+    height: 27px;
+
+    letter-spacing: normal;
+
+    color: var(--roulette-gray);
+    background-color: var(--roulette-white);
+
+    position: fixed;
+    text-align: center;
+
+    top: calc(100vh - 27px);
+    left: 0;
+    right: 0;
+
+    z-index: 10000;
+}
+#logo {
+    height: 100%;
+    box-sizing: border-box;
+
+    padding: .5%;
 }
